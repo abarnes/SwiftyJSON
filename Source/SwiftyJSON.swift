@@ -769,7 +769,7 @@ extension JSON {
 }
 
 // MARK: - Bool
-
+/*
 extension JSON: Swift.BooleanType {
 
     //Optional bool
@@ -806,6 +806,7 @@ extension JSON: Swift.BooleanType {
         }
     }
 }
+*/
 
 // MARK: - String
 
@@ -875,7 +876,7 @@ extension JSON {
             case .String:
                 let decimal = NSDecimalNumber(string: self.object as? String)
                 if decimal == NSDecimalNumber.notANumber() {  // indicates parse error
-                    return NSDecimalNumber.zero()
+                    return NSDecimalNumber.zero
                 }
                 return decimal
             case .Number, .Bool:
