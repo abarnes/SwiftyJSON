@@ -189,7 +189,7 @@ public struct JSON {
     public var error: NSError? { get { return self._error } }
 
     /// The static null json
-    @available(*, unavailable, renamed="null")
+    // @available(*, unavailable, renamed="null")
     public static var nullJSON: JSON { get { return null } }
     public static var null: JSON { get { return JSON(NSNull()) } }
 }
@@ -876,7 +876,7 @@ extension JSON {
             case .String:
                 let decimal = NSDecimalNumber(string: self.object as? String)
                 if decimal == NSDecimalNumber.notANumber() {  // indicates parse error
-                    return NSDecimalNumber.zero
+                    return NSDecimalNumber.zero()
                 }
                 return decimal
             case .Number, .Bool:
