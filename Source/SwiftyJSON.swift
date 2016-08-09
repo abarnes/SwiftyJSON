@@ -769,8 +769,7 @@ extension JSON {
 }
 
 // MARK: - Bool
-/*
-extension JSON: Swift.BooleanType {
+extension JSON {
 
     //Optional bool
     public var bool: Bool? {
@@ -806,7 +805,6 @@ extension JSON: Swift.BooleanType {
         }
     }
 }
-*/
 
 // MARK: - String
 
